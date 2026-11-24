@@ -1,15 +1,19 @@
 // node --test
 const test = require('node:test');
 const assert = require('node:assert');
-const { CATS, CALLS } = require('../data/calls.js');
+const { CATS, CALLS, COMEBACK } = require('../data/calls.js');
 
-test('хватает на смену: 5 обманов и 3 честных', () => {
-  assert.ok(CALLS.filter(c => c.scam).length >= 5);
-  assert.ok(CALLS.filter(c => !c.scam).length >= 3);
+test('хватает на три дня: 12 обманов и 9 честных', () => {
+  assert.ok(CALLS.filter(c => c.scam).length >= 12);
+  assert.ok(CALLS.filter(c => !c.scam).length >= 9);
 });
 test('id не повторяются, жильцов шестеро', () => {
   assert.strictEqual(new Set(CALLS.map(c => c.id)).size, CALLS.length);
   assert.strictEqual(new Set(CATS.map(c => c.id)).size, 6);
+});
+test('второй обман заполнен', () => {
+  for (const k of ['from', 'ask', 'call', 'look', 'why']) assert.ok(COMEBACK[k]);
+  assert.ok(COMEBACK.scam && COMEBACK.sum > 0 && COMEBACK.ask.includes('{name}'));
 });
 test('каждому жильцу кто-то звонит', () => { for (const c of CATS) assert.ok(CALLS.some(x => x.to === c.id), c.id); });
 for (const c of CALLS) test(c.id + ': заполнен правильно', () => {
