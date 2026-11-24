@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Кот на проводе</title>
+<meta name="description" content="Все звонки дома идут через тебя. Не дай мошенникам обмануть котов.">
+<meta property="og:title" content="Кот на проводе">
+<meta property="og:description" content="Все звонки дома идут через тебя. Не дай мошенникам обмануть котов.">
+<meta property="og:type" content="website"><meta property="og:url" content="https://yasavok.github.io/kot-na-provode/">
+<meta property="og:image" content="https://yasavok.github.io/kot-na-provode/docs/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <div class="bar" id="bar"></div>
+  <section class="house"><canvas id="house" width="204" height="118" role="img" aria-label="Дом: шесть квартир с котами"></canvas><div id="tags"></div></section>
+  <section class="card" id="card"></section>
+  <section class="desk" id="desk"></section>
+</main>
+<div id="live" class="sr" aria-live="polite"></div>
+<footer>Коты, звонки и сайты придуманы. Игра ничего не отправляет и не запоминает.</footer>
+<noscript>Для игры нужен JavaScript.</noscript>
+<script src="data/calls.js"></script>
+<script src="js/pixel.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
