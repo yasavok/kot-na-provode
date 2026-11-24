@@ -1,0 +1,17 @@
+name: Новая схема обмана
+description: Расскажи о схеме, которой нет в игре
+labels: [схема]
+body:
+  - type: markdown
+    attributes:
+      value: Не указывай настоящие имена, номера телефонов, карт и адреса.
+  - type: textarea
+    id: story
+    attributes:
+      label: Что говорят или пишут
+    validations:
+      required: true
+  - type: textarea
+    id: signs
+    attributes:
+      label: Как можно распознать

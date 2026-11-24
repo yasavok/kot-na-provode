@@ -1,0 +1,9 @@
+{
+  "name": "kot-na-provode",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Игра про телефонных и сетевых мошенников",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": { "test": "node --test" }
+}
